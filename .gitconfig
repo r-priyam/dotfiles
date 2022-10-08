@@ -1,0 +1,12 @@
+[user]
+	name = r-priyam
+	email = roy_priyam@outlook.com
+
+[pull]
+	rebase = true
+
+[init]
+	defaultBranch = main
+
+[rebase]
+	autoStash = true

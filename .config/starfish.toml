@@ -1,0 +1,45 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+command_timeout = 1000
+add_newline = false
+
+[aws]
+format = ""
+
+[directory]
+truncate_to_repo = false
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[line_break]
+disabled = false
+
+[time]
+disabled = false
+format = '🕙[ $time ]($style)'
+time_format = "%R"
+
+[git_status]
+ahead = "⇡${count}"
+behind = "⇣${count}"
+conflicted = "[🤪${count}](bright-red) "
+deleted = "[🗑${count}](red) "
+diverged = "⇡${ahead_count} ⇣${behind_count}"
+modified = "[📒${count}](yellow) "
+renamed = "[🚗${count}](bright-red) "
+staged = "[✔${count}](green) "
+stashed = "[� ${count}](bright-blue) "
+untracked = "🤷‍${count} "
+
+[git_commit]
+only_detached = false
+
+[package]
+disabled = true
