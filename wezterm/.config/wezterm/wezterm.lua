@@ -56,23 +56,26 @@ config.keys = {
   { key = "Backspace",  mods = "SUPER",     action = wezterm.action({ SendString = "\x15" }) },
 
   -- Tab navigation
-  { key = "RightArrow", mods = "CMD|OPT",   action = wezterm.action.ActivateTabRelative(1) },
-  { key = "LeftArrow",  mods = "CMD|OPT",   action = wezterm.action.ActivateTabRelative(-1) },
+  { key = "RightArrow", mods = "SUPER|OPT",   action = wezterm.action.ActivateTabRelative(1) },
+  { key = "LeftArrow",  mods = "SUPER|OPT",   action = wezterm.action.ActivateTabRelative(-1) },
 
   -- Pane navigation
-  { key = "RightArrow", mods = "CMD|CTRL",  action = wezterm.action.ActivatePaneDirection("Right") },
-  { key = "LeftArrow",  mods = "CMD|CTRL",  action = wezterm.action.ActivatePaneDirection("Left") },
-  { key = "UpArrow",    mods = "CMD|CTRL",  action = wezterm.action.ActivatePaneDirection("Up") },
-  { key = "DownArrow",  mods = "CMD|CTRL",  action = wezterm.action.ActivatePaneDirection("Down") },
+  { key = "RightArrow", mods = "SUPER|CTRL",  action = wezterm.action.ActivatePaneDirection("Right") },
+  { key = "LeftArrow",  mods = "SUPER|CTRL",  action = wezterm.action.ActivatePaneDirection("Left") },
+  { key = "UpArrow",    mods = "SUPER|CTRL",  action = wezterm.action.ActivatePaneDirection("Up") },
+  { key = "DownArrow",  mods = "SUPER|CTRL",  action = wezterm.action.ActivatePaneDirection("Down") },
 
   -- Split Tab actions
-  { key = "RightArrow", mods = "CMD|SHIFT", action = wezterm.action { SplitHorizontal = { domain = "CurrentPaneDomain" } } },
-  { key = "DownArrow",  mods = "CMD|SHIFT", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
+  { key = "RightArrow", mods = "SUPER|SHIFT", action = wezterm.action { SplitHorizontal = { domain = "CurrentPaneDomain" } } },
+  { key = "DownArrow",  mods = "SUPER|SHIFT", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
 
   -- Misc actions
-  { key = "k",          mods = "CMD",       action = wezterm.action.ActivateCommandPalette },
-  { key = "c",          mods = "CMD|SHIFT", action = wezterm.action.ActivateCopyMode },
-  { key = "w",          mods = "CMD",       action = wezterm.action.CloseCurrentPane({ confirm = true }) },
+  { key = "k",          mods = "SUPER",       action = wezterm.action.ActivateCommandPalette },
+  { key = "c",          mods = "SUPER|SHIFT", action = wezterm.action.ActivateCopyMode },
+  { key = "w",          mods = "SUPER",       action = wezterm.action.CloseCurrentPane({ confirm = true }) },
+
+  -- Search actions
+  -- { key = "f",          mods = "SUPER",       action = wezterm.action.Search({ CaseInSensitiveString = '' }) },
 }
 
 return config
