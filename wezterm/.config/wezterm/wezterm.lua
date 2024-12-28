@@ -7,6 +7,8 @@ config.font_size = 14
 config.command_palette_font_size = 18.0
 config.line_height = 1.2
 config.font = wezterm.font("DankMono Nerd Font")
+-- config.font = wezterm.font("JetBrainsMono Nerd Font")
+-- config.font = wezterm.font("FiraCode Nerd Font")
 
 -- Cursor settings
 config.default_cursor_style = "BlinkingBar"
