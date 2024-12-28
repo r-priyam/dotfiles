@@ -1,0 +1,100 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$golang\
+$helm\
+$nodejs\
+$python\
+$kubernetes\
+$cmd_duration\
+$line_break\
+$character"""
+
+add_newline = false
+# Hate the warning always
+command_timeout = 3600000
+palette = "tokyo_night"
+
+[fill]
+symbol = " "
+
+[directory]
+format = "[$path ]($style)"
+style = "bold fg:dark_blue"
+truncate_to_repo = false
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+format = "[$symbol($version)]($style) "
+style = "cyan"
+symbol = " "
+
+[helm]
+format = "[$symbol$version]($style) "
+style = "blue"
+symbol = "⎈ "
+
+[nodejs]
+format = "[$symbol$version]($style) "
+style = "green"
+symbol = " "
+
+[python]
+format = "[${symbol}(${version} )]($style) "
+python_binary = "python3"
+style = "yellow"
+symbol = " "
+
+[kubernetes]
+disabled = false
+format = "[$symbol$context(\($namespace\))]($style) "
+style = "cyan"
+symbol = "󱃾 "
+
+[character]
+error_symbol = "[➜](red)"
+success_symbol = "[➜](green)"
+
+[cmd_duration]
+format = "[$duration]($style)"
+min_time = 500
+style = "fg:gray"
+
+[palettes.nord]
+black = "#2E3440"
+blue = "#81A1C1"
+dark_blue = "#5E81AC"
+gray = "#434C5E"
+green = "#A3BE8C"
+orange = "#D08770"
+purple = "#B48EAD"
+red = "#BF616A"
+teal = "#88C0D0"
+white = "#D8DEE9"
+yellow = "#EBCB8B"
+
+[palettes.tokyo_night]
+background = "#1a1b26"
+black = "#1a1b26"
+blue = "#7aa2f7"
+cyan = "#7dcfff"
+foreground = "#c0caf5"
+gray = "#a9b1d6"
+green = "#9ece6a"
+orange = "#ff9e64"
+purple = "#bb9af7"
+red = "#f7768e"
+white = "#c0caf5"
+yellow = "#e0af68"
