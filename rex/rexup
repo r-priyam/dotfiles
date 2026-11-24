@@ -1,0 +1,4 @@
+#!/bin/sh
+# rexup: bring back every saved Rex session and resume its Claude chats.
+# Run after a restart. Sessions already open are left alone.
+exec python3 -I "$(dirname "$(readlink -f "$0")")/rex-sessions.py" restore --wait "$@"
