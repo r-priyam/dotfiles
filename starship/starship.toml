@@ -15,7 +15,10 @@ $python\
 $nodejs\
 $golang\
 $helm\
+$terraform\
+$docker_context\
 $kubernetes\
+$aws\
 $cmd_duration"""
 
 add_newline = true
@@ -77,13 +80,33 @@ symbol = "⎈ "
 style = "blue"
 
 [kubernetes]
-disabled = false
-# Only in folders that deploy to a cluster, not on every prompt.
-detect_files = ["Chart.yaml", "helmfile.yaml", "kustomization.yaml", "skaffold.yaml", "Tiltfile"]
-detect_folders = ["charts", "helm", "k8s", "kustomize"]
+disabled = false # shown everywhere: kubectl acts on this context wherever you are
 format = "[$symbol$context( \\($namespace\\))]($style) "
 symbol = "󱃾 "
 style = "cyan"
+
+# First match wins: nonprod stays calm, anything else with "prod" turns red.
+[[kubernetes.contexts]]
+context_pattern = ".*nonprod.*"
+style = "cyan"
+
+[[kubernetes.contexts]]
+context_pattern = ".*prod.*"
+style = "bold red"
+
+[aws]
+format = "([ $profile]($style) )" # only when AWS_PROFILE is set; the default region alone is noise
+style = "orange"
+
+[terraform]
+format = "[$symbol$workspace]($style) "
+symbol = "󱁢 "
+style = "purple"
+
+[docker_context]
+format = "[$symbol$context]($style) " # only when not the default context
+symbol = " "
+style = "blue"
 
 [cmd_duration]
 format = "[$duration]($style)"
