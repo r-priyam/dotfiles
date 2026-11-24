@@ -6,7 +6,8 @@
 --   cmd+w close pane, cmd+shift+w close window,
 --   cmd+left/right/backspace and alt+left/right line editing.
 -- Visual settings (font, theme, cursor, padding, option key) live in the
--- app, not here: see ../../settings.sh.
+-- app, not here: see ../../settings.sh. Ayu theme file: ../../themes/Ayu
+-- (Settings > Themes > Import Theme, or settings.sh imports it).
 
 -- Option+Backspace deletes the previous word (Ghostty: text:\x17).
 rex.bind("alt+backspace", "pane.send_key", { key = "ctrl+w" })

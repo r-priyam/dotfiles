@@ -19,6 +19,7 @@ s terminal.cursor.blink           value=off
 s terminal.keyboard.option        value=sends_alt  # macos-option-as-alt = true
 s interface.pane_padding.horizontal value=8
 s interface.pane_padding.vertical   value=8
+"$REX" "${C[@]}" do client.theme.import path="$(cd "$(dirname "$0")" && pwd)/themes/Ayu"
 s themes.dark.palette             value=Ayu
 s themes.light.palette            value=Ayu
 s notifications.activity.system_notifications value=true
