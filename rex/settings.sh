@@ -17,6 +17,8 @@ s terminal.advanced_fonts.smoothing  value=true    # font-thicken = true
 s terminal.cursor.style           value=block
 s terminal.cursor.blink           value=off
 s terminal.keyboard.option        value=sends_alt  # macos-option-as-alt = true
+s terminal.selection.copy_on_select          value=true  # selecting text copies it, like Claude Code
+s terminal.selection.play_animation_on_copy  value=true  # shine across the selection to confirm the copy
 s interface.pane_padding.horizontal value=8
 s interface.pane_padding.vertical   value=8
 s interface.active_panes.fade       value=surface  # dim only the background of unfocused panes; text stays readable
