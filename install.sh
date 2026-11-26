@@ -31,7 +31,6 @@ fi
 
 # Terminal and prompt
 link rex/init.lua            ~/.config/rex/init.lua
-link rex/rexup               ~/.local/bin/rexup
 link starship/starship.toml  ~/.config/starship.toml
 link wezterm/wezterm.lua     ~/.config/wezterm/wezterm.lua
 

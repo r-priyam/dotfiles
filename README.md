@@ -18,7 +18,7 @@ it, so editing either copy edits both.
 |---|---|---|
 | `claude/` | Claude Code: instructions, keybindings, shared settings | `~/.claude/` |
 | `git/` | git config and global ignore | `~/.config/git/` |
-| `rex/` | Rex config, theme, session restore (`rexup`), live subagent panes | `~/.config/rex/`, `~/.local/bin/` |
+| `rex/` | Rex config, theme, live subagent panes | `~/.config/rex/` |
 | `starship/` | prompt | `~/.config/starship.toml` |
 | `wezterm/` | WezTerm (old terminal, kept for reference) | `~/.config/wezterm/` |
 

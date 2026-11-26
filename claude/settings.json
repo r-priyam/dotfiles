@@ -141,15 +141,6 @@
             "timeout": 5
           }
         ]
-      },
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 -I '{dotfiles}/rex/rex-sessions.py' hook",
-            "timeout": 5
-          }
-        ]
       }
     ],
     "SessionEnd": [
@@ -159,15 +150,6 @@
           {
             "type": "command",
             "command": "serena-hooks cleanup --client=claude-code"
-          }
-        ]
-      },
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 -I '{dotfiles}/rex/rex-sessions.py' hook",
-            "timeout": 5
           }
         ]
       }
